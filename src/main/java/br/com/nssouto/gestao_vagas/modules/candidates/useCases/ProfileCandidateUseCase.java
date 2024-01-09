@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import br.com.nssouto.gestao_vagas.modules.candidates.CandidateEntity;
 import br.com.nssouto.gestao_vagas.modules.candidates.CandidateRepository;
 import br.com.nssouto.gestao_vagas.modules.candidates.controllers.dto.ProfileCandidateResponseDTO;
 import br.com.nssouto.gestao_vagas.modules.candidates.controllers.dto.ProfileCandidateResponseDTO.ProfileCandidateResponseDTOBuilder;

@@ -9,7 +9,7 @@ import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.auth0.jwt.interfaces.DecodedJWT;
 
 @Service
-public class JWTCandidteProvider {
+public class JWTCandidateProvider {
 
     @Value("${security.token.secret.candidate}")
     private String secretKey;
@@ -23,6 +23,7 @@ public class JWTCandidteProvider {
             var tokenDecoded = JWT.require(algorithm).build().verify(token);
             return tokenDecoded;
         } catch (JWTVerificationException e) {
+            e.printStackTrace();
             return null;
         }
 
