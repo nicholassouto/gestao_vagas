@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.nssouto.gestao_vagas.modules.candidates.controllers.dto.AuthCandidateRequestDTO;
+import br.com.nssouto.gestao_vagas.modules.candidates.dto.AuthCandidateRequestDTO;
 import br.com.nssouto.gestao_vagas.modules.candidates.useCases.AuthCandidateUseCase;
 
 @RestController

@@ -1,4 +1,4 @@
-package br.com.nssouto.gestao_vagas.modules.candidates.controllers.dto;
+package br.com.nssouto.gestao_vagas.modules.candidates.dto;
 
 import java.util.UUID;
 

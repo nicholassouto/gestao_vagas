@@ -16,8 +16,8 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 
 import br.com.nssouto.gestao_vagas.modules.candidates.CandidateRepository;
-import br.com.nssouto.gestao_vagas.modules.candidates.controllers.dto.AuthCandidateRequestDTO;
-import br.com.nssouto.gestao_vagas.modules.candidates.controllers.dto.AuthCandidateResponseDTO;
+import br.com.nssouto.gestao_vagas.modules.candidates.dto.AuthCandidateRequestDTO;
+import br.com.nssouto.gestao_vagas.modules.candidates.dto.AuthCandidateResponseDTO;
 
 @Service
 public class AuthCandidateUseCase {
@@ -46,7 +46,7 @@ public class AuthCandidateUseCase {
 
         var expiresIn = Instant.now().plus(Duration.ofHours(2));
         
-        var token = JWT.create().withIssuer("javagas").withSubject(candidate.getId().toString()).withClaim("roles", Arrays.asList("candidate")).withExpiresAt(expiresIn).sign(algorithm);
+        var token = JWT.create().withIssuer("javagas").withSubject(candidate.getId().toString()).withClaim("roles", Arrays.asList("CANDIDATE")).withExpiresAt(expiresIn).sign(algorithm);
 
         var authCandidateResponse = AuthCandidateResponseDTO.builder().access_token(token)
         .expires_in(expiresIn.toEpochMilli()).build();
